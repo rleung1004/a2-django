@@ -1,0 +1,78 @@
+2022-04-08 11:57:49,662:INFO:Initializing load_model()
+2022-04-08 11:57:49,663:INFO:load_model(model_name=stacked_final_stroke_predict, platform=None, authentication=None, verbose=True)
+2022-04-08 04:59:11,062:INFO:Initializing load_model()
+2022-04-08 04:59:11,062:INFO:load_model(model_name=stacked_final_stroke_predict, platform=None, authentication=None, verbose=True)
+2022-04-08 05:00:03,241:INFO:Initializing load_model()
+2022-04-08 05:00:03,241:INFO:load_model(model_name=stacked_final_stroke_predict, platform=None, authentication=None, verbose=True)
+2022-04-08 05:00:47,263:INFO:Initializing load_model()
+2022-04-08 05:00:47,263:INFO:load_model(model_name=stacked_final_stroke_predict, platform=None, authentication=None, verbose=True)
+2022-04-08 05:06:02,548:INFO:Initializing load_model()
+2022-04-08 05:06:02,548:INFO:load_model(model_name=stacked_final_stroke_predict, platform=None, authentication=None, verbose=True)
+2022-04-08 05:06:02,632:INFO:Initializing predict_model()
+2022-04-08 05:06:02,632:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(display_types=False,
+                                      ml_usecase='classification',
+                                      target='stroke')),
+                ('imputer',
+                 Iterative_Imputer(classifier=LGBMClassifier(random_state=2718),
+                                   max_iter=5, ordinal_columns=[],
+                                   random_state=2718,
+                                   regressor=RandomForestRegressor(n_jobs=-1,
+                                                                   random_state=2718),
+                                   target='stroke')),
+                ('new_levels1',
+                 New_Catagorical_Level...
+                                                 LinearDiscriminantAnalysis()),
+                                                ('lightgbm',
+                                                 LGBMClassifier(bagging_fraction=0.9,
+                                                                bagging_freq=1,
+                                                                feature_fraction=0.5,
+                                                                learning_rate=0.05,
+                                                                min_child_samples=11,
+                                                                min_split_gain=0.3,
+                                                                num_leaves=256,
+                                                                random_state=2718,
+                                                                reg_alpha=0.1,
+                                                                reg_lambda=0.0005))],
+                                    final_estimator=LogisticRegression(C=2.999,
+                                                                       class_weight='balanced',
+                                                                       max_iter=1000,
+                                                                       random_state=2718),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2022-04-08 05:06:02,632:INFO:Checking exceptions
+2022-04-08 05:06:02,632:INFO:Preloading libraries
+2022-04-08 18:28:03,656:INFO:Initializing load_model()
+2022-04-08 18:28:03,656:INFO:load_model(model_name=stacked_final_stroke_predict, platform=None, authentication=None, verbose=True)
+2022-04-08 18:28:03,780:INFO:Initializing predict_model()
+2022-04-08 18:28:03,780:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(display_types=False,
+                                      ml_usecase='classification',
+                                      target='stroke')),
+                ('imputer',
+                 Iterative_Imputer(classifier=LGBMClassifier(random_state=2718),
+                                   max_iter=5, ordinal_columns=[],
+                                   random_state=2718,
+                                   regressor=RandomForestRegressor(n_jobs=-1,
+                                                                   random_state=2718),
+                                   target='stroke')),
+                ('new_levels1',
+                 New_Catagorical_Level...
+                                                 LinearDiscriminantAnalysis()),
+                                                ('lightgbm',
+                                                 LGBMClassifier(bagging_fraction=0.9,
+                                                                bagging_freq=1,
+                                                                feature_fraction=0.5,
+                                                                learning_rate=0.05,
+                                                                min_child_samples=11,
+                                                                min_split_gain=0.3,
+                                                                num_leaves=256,
+                                                                random_state=2718,
+                                                                reg_alpha=0.1,
+                                                                reg_lambda=0.0005))],
+                                    final_estimator=LogisticRegression(C=2.999,
+                                                                       class_weight='balanced',
+                                                                       max_iter=1000,
+                                                                       random_state=2718),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2022-04-08 18:28:03,780:INFO:Checking exceptions
+2022-04-08 18:28:03,780:INFO:Preloading libraries

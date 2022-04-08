@@ -1,0 +1,73 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Questionnaire For Stroke</h1>
+
+  <!-- This form references the homePost route. -->
+<form action="{% url 'homePost' %}" method="post">
+{% csrf_token %}
+
+<h3>Gender</h3>
+
+<!-- Show radio button list named 'genders' -->
+{% for choice in genders %}
+    <input type="radio" name="gender" id="genders{{ forloop.counter }}" value="{{ choice }}">
+    <label for="genders{{ forloop.counter }}">{{ choice }}</label>
+{% endfor %}
+
+    <h3>Age</h3>
+<input type="text" id="age" name="age"><br>
+
+
+    <h3>Hypertension</h3>
+{% for choice in hypertension %}
+    <input type="radio" name="hypertension" id="hypertension{{ forloop.counter }}" value="{{ choice }}">
+    <label for="hypertension{{ forloop.counter }}">{{ choice }}</label>
+{% endfor %}
+
+    <h3>Heart Disease</h3>
+    {% for choice in heart_disease %}
+    <input type="radio" name="heart_disease" id="heart_disease{{ forloop.counter }}" value="{{ choice }}">
+    <label for="heart_disease{{ forloop.counter }}">{{ choice }}</label>
+{% endfor %}
+
+    <h3>Ever Married</h3>
+    {% for choice in ever_married %}
+    <input type="radio" name="ever_married" id="ever_married{{ forloop.counter }}" value="{{ choice }}">
+    <label for="ever_married{{ forloop.counter }}">{{ choice }}</label>
+{% endfor %}
+
+    <h3>Work Type</h3>
+    {% for choice in work_type %}
+    <input type="radio" name="work_type" id="work_type{{ forloop.counter }}" value="{{ choice }}">
+    <label for="work_type{{ forloop.counter }}">{{ choice }}</label>
+{% endfor %}
+
+    <h3>Residence Type</h3>
+    {% for choice in Residence_type %}
+    <input type="radio" name="Residence_type" id="Residence_type{{ forloop.counter }}" value="{{ choice }}">
+    <label for="Residence_type{{ forloop.counter }}">{{ choice }}</label>
+{% endfor %}
+
+    <h3>Average Glucose Level</h3>
+<input type="text" id="avg_glucose_level" name="avg_glucose_level"><br>
+
+    <h3>BMI</h3>
+<input type="text" id="bmi" name="bmi"><br>
+
+    <h3>Smoking Status</h3>
+    {% for choice in smoking_status %}
+    <input type="radio" name="smoking_status" id="smoking_status{{ forloop.counter }}" value="{{ choice }}">
+    <label for="smoking_status{{ forloop.counter }}">{{ choice }}</label>
+{% endfor %}
+
+    <br><br>
+<!—Submit button is also contained in the form -->
+<input type="submit" value="POST YOUR CHOICE">
+</form>
+<!-- End of form. -->
+
+<!-- This error will notify the user if there are issues with the POST request -->
+{% if errorMessage %}<p><strong>{{errorMessage}}</strong></p>{% endif %}
+{% endblock content %}
