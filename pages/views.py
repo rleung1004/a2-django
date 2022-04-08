@@ -92,6 +92,6 @@ def results(request, gender, age, hypertension, heart_disease, ever_married,
         'smoking_status': smoking_status
     }, index=[0])
     print(df)
-    print(predict_model(model, data=df))
+    prediction = model.predict(df)
 
-    return render(request, 'results.html', {'choice': 1, 'gmat': 1})
+    return render(request, 'results.html', {'prediction': prediction[0]})

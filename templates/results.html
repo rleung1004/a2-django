@@ -3,7 +3,9 @@
 
 {% block content %}
   <h1>Results page</h1>
-  You entered the following information:<br/>
-  Years work exerience {{choice}}<br/>
-  GMAT Score {{gmat}}
+  {% if prediction %}
+    <h2>You may have a stroke!</h2>
+  {% else %}
+    <h2>You are not prone to a stroke.</h2>
+  {% endif %}
 {% endblock content %}
